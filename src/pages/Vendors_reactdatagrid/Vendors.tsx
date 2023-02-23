@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import { Collapse, Icon, IconButton } from '@mui/material';
 import { Stack } from '@mui/system';
 
-import { useAuthInfo } from '@propelauth/react';
 
 import DataTable from '@/components/DataTable';
 import FormDialog from '@/components/FormDialog/FormDialog';
@@ -20,9 +19,7 @@ import dataTableVendorsData from '@/pages/Vendors/mock_data/dataTableVendors';
 
 function Vendors() {
   const [data, setData]: any = useState(null);
-  const authInfo: any = useAuthInfo();
   const [open, setOpen] = useState(false);
-  const [accessToken, setAccessToken] = useState(authInfo['accessToken']);
 
   const handleClickOpen = () => {
     setOpen(true);
