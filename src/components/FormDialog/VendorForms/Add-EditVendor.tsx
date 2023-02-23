@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form';
 
 import { FormLabel, Grid, TextField } from '@mui/material';
 
-import { useAuthInfo } from '@propelauth/react';
 
 import SoftBox from '@/components/SoftBox';
 import SoftButton from '@/components/SoftButton';
@@ -37,56 +36,14 @@ function AddEditVendor({
     'name',
     'description',
   ];
-  const authInfo: any = useAuthInfo();
-  const [accessToken, setAccessToken] = useState(authInfo['accessToken']);
   const [formData, setFormData]: any = useState(null);
-  //on Submit
-  const onSubmit = (d: any) => {
-    try {
-      if (!value) {
-        d.isEnabled = true;
-        d.customFields = {};
-        PostVendors(accessToken, JSON.stringify(d));
-        alert(JSON.stringify(d));
-      } else {
-        if (formData.name === d.name) delete d.name;
-        editVendor(accessToken, JSON.stringify(d), value);
-      }
-      handleClose();
-      reset();
-    } catch (e) {
-      setError('name', { type: 'serviceSideError', message: 'Something is wrong' });
-    }
 
-  };
-
-  useEffect(() => {
-    if (value && isOpen) {
-      console.log(value);
-      GetVendor(accessToken, value).then((vendorData: VendorFormInputs) => {
-        setFormData(vendorData);
-        console.log('vendor data', vendorData);
-        setValue('name', vendorData.name);
-        setValue('contactName', vendorData.contactName);
-        setValue('contactEmail', vendorData.contactEmail);
-        setValue('contactPhoneNumber', vendorData.contactPhoneNumber);
-        setValue('address', vendorData.address);
-        setValue('website', vendorData.website);
-        setValue('description', vendorData.description);
-      });
-    }
-  }, [value]);
-  //TODO : Set validation on the inputs
-  /*   useEffect(() => {
-    inputs.forEach((input:any) => {
-            register(input,{required:true})
-        });
-  }, [])
- */
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(()=>{
+        
+      })}>
         <Grid container columnSpacing={3} rowSpacing={2} paddingTop={2}>
           <Grid item xs={6}>
             <SoftBox>

@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import { Collapse, Icon, IconButton } from '@mui/material';
 import { Stack } from '@mui/system';
 
-import { useAuthInfo } from '@propelauth/react';
 
 import DataTable from '@/components/DataTable';
 import FormDialog from '@/components/FormDialog/FormDialog';
@@ -20,35 +19,11 @@ import dataTableVendorsData from '@/pages/Vendors/mock_data/dataTableVendors';
 
 function Vendors() {
   const [data, setData]: any = useState(null);
-  const authInfo: any = useAuthInfo();
   const [open, setOpen] = useState(false);
-  const [accessToken, setAccessToken] = useState(authInfo['accessToken']);
 
   const handleClickOpen = () => {
     setOpen(true);
   };
-
-  useEffect(() => {
-    GetVendors(accessToken).then((data) => {
-      console.log('Data', data);
-
-      const vendorsData: VendorsData = data.map((vendor: VendorsData) => {
-        return {
-          address: vendor.address,
-          contactEmail: vendor.contactEmail,
-          contactName: vendor.contactName,
-          contactPhone: vendor.contactPhoneNumber,
-          description: vendor.description,
-          name: vendor.name,
-          isEnabled: vendor.isEnabled.toString(),
-          action: vendor.id,
-          website: vendor.website,
-        };
-      });
-      setData(vendorsData);
-      console.log(vendorsData);
-    });
-  }, [accessToken, open, setData]);
 
   const optionsMenu = () => (
     <SoftBox display="flex" justifyContent="space-between" alignItems="flex-start" py={3} px={0}>

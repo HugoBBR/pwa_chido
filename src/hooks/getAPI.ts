@@ -1,16 +1,14 @@
-import { useAuthInfo } from "@propelauth/react";
 import { useMutation, useQueryClient, useQuery } from "@tanstack/react-query";
 
 //TODO: ADD functions to patch and post with react query
 export default function GetITOSAPI(props: { endpoint: any; }) {
-    const authInfo:any = useAuthInfo()
 
     const callEndpoint = async (params: { endpoint: any; }) => {
 
       if (!authInfo) {
         throw Error("No active account!");
       }
-      const accessToken=authInfo['accessToken']
+      const accessToken=''
 
   
       const options = {

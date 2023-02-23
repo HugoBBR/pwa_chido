@@ -8,7 +8,6 @@ import '@inovua/reactdatagrid-community/index.css';
 import './style/index.css'
 import { TypeColumn } from '@inovua/reactdatagrid-community/types';
 import { TypeHeaderProps } from '@inovua/reactdatagrid-community/types/TypeColumn';
-import { useAuthInfo } from '@propelauth/react';
 import PaginationToolbar from '@inovua/reactdatagrid-community/packages/PaginationToolbar'
 
 import ActionCell from '@/components/ActionCell';
@@ -31,8 +30,6 @@ function VendorsDG() {
   const [rows, setRows] = useState({});
 
   const gridRef: any = useRef(null);
-  const authInfo: any = useAuthInfo();
-  const [accessToken, setAccessToken] = useState(authInfo['accessToken']);
   const [editOpen,setEditOpen]=useState(false)
     const {data,refetch,isFetching,isFetched}=GetITOSAPI({endpoint:'/vendors'})
   const CustomHeader = ({ value }: any) => (
