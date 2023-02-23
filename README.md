@@ -1,5 +1,4 @@
-# Introduction 
-This is the front end of the ITOS. 
+
 
 # Tech Stack
 Vite
