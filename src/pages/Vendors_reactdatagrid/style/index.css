@@ -1,0 +1,19 @@
+.global-datagrid-3px-tomato-border{
+    box-shadow: 10 !important;
+    margin-top: 100 !important;
+}
+
+.global-row{
+    background-color: black !important;
+}
+
+.body{
+    border: 0 !important;
+    min-height: 700 !important;
+}
+
+.rows{
+    background-color: white !important;
+    color: #6e7d94 !important;
+    font-size: 18 !important;
+}

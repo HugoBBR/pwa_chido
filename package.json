@@ -1,0 +1,105 @@
+{
+  "name": "react-pwa",
+  "version": "2.1.0",
+  "description": "Starter kit for modern web applications",
+  "homepage": "https://react-pwa.surenatoyan.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suren-atoyan/react-pwa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/suren-atoyan/react-pwa/issues",
+    "email": "contact@surenatoyan.com"
+  },
+  "testEnvironment": "jsdom",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "https-preview": "serve dist",
+    "prepare": "husky install",
+    "optimize": "vite optimize",
+    "pretty": "prettier --write \"./**/*.{ts,tsx,json}\"",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@inovua/reactdatagrid-community": "^5.8.1",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/lab": "5.0.0-alpha.100",
+    "@mui/material": "^5.10.6",
+    "@mui/system": "^5.10.6",
+    "@mui/utils": "^5.10.6",
+    "@propelauth/react": "^2.0.2",
+    "@tanstack/react-query": "^4.22.0",
+    "@tanstack/react-query-devtools": "^4.22.0",
+    "chart.js": "^4.1.1",
+    "chroma-js": "^2.4.2",
+    "is-mobile": "^3.1.1",
+    "notistack": "^2.0.5",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.1.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^3.1.4",
+    "react-helmet-async": "^1.3.0",
+    "react-hook-form": "^7.41.5",
+    "react-hotkeys-hook": "^3.4.7",
+    "react-router-dom": "^6.4.1",
+    "react-select": "^5.7.0",
+    "react-table": "^7.8.0",
+    "recoil": "^0.7.5"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+    "@types/chroma-js": "^2.1.4",
+    "@types/node": "^18.7.21",
+    "@types/node-fetch": "^2.6.2",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-table": "^7.7.14",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "@vitejs/plugin-react": "^2.1.0",
+    "@vitest/ui": "^0.26.3",
+    "cross-fetch": "^3.1.5",
+    "eslint": "^8.24.0",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "history": "^5.3.0",
+    "https-localhost": "^4.7.1",
+    "husky": "^8.0.1",
+    "jsdom": "^20.0.3",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1",
+    "typescript": "^4.8.3",
+    "vite": "^4.0.4",
+    "vite-plugin-babel": "^1.1.3",
+    "vite-plugin-pwa": "^0.14.1",
+    "vitest": "^0.27.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "eslint --max-warnings=0"
+    ]
+  },
+  "author": {
+    "name": "Suren Atoyan",
+    "email": "contact@surenatoyan.com",
+    "url": "http://surenatoyan.com/"
+  },
+  "keywords": [
+    "react",
+    "pwa",
+    "starter-kit",
+    "vite"
+  ]
+}

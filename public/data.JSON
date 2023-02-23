@@ -1,0 +1,64 @@
+{
+    "Equipment" : {
+        "Total":"02",
+        "MonthlyCost":"106",
+        "YearlyCost":"3,300"
+    },
+    "Software":{
+        "Total":"02",
+        "MonthlyCost":"106",
+        "YearlyCost":"3,300"
+    },
+    "EquipmentDetails":{
+        "asset2":{
+            "name":"iPhone 12",
+            "status":"Checked out",
+            "assetId":"201029",
+            "modelCost":800,
+            "modelMonthlyCost":33.33
+        },
+        "asset1":{
+            "name":"MacBook Pro - M1",
+            "status":"Checked out",
+            "assetId":"201029",
+            "modelCost":2500,
+            "modelMonthlyCost":69.44
+        }
+    },
+    "SoftwareDetails":{
+        "Software1":{
+            "name":"Microsoft Office 365",
+            "status":"Up to date",
+            "lastUpdate":"10/20/22"
+        },
+        "Software2":{
+            "name":"Marvel Prototyping",
+            "status":"Update available",
+            "lastUpdate":"10/20/22"
+        }
+    },
+    "UpcomingTrainings":{
+        "training1":{
+            "name":"Generate Time: Master the Art of Out...",
+            "tool":" You probably use Outlook every day, but",
+            "schedule":"8:30 am - 10:00 am",
+            "day":"October 30"
+        }
+    },
+    "UpcomingMeetings":{
+        "meeting1":{
+            "name":"Daily Stand Up",
+            "tool":"Tech Hub",
+            "schedule":"9:00 AM to 9:30 AM (30 minutes)",
+            "day":"October 30"
+
+        },
+        "meeting2":{
+            "name":"Business Lead & IFS Customization",
+            "tool":"Teams",
+            "schedule":"9:45 AM to 10:00 AM (15 minutes)",
+            "day":"October 30"
+
+        }
+    }
+}
